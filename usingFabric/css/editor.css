@@ -1,0 +1,84 @@
+.float-left{
+    float: left !important;
+}
+
+.float-right{
+    float: right !important;
+}
+
+.clear-float{
+    clear: both;
+}
+
+.canvas-wrap canvas{
+    border: 1px solid #ADADAD;
+    background: none;
+}
+
+.canvasActive{
+    cursor: crosshair;
+}
+
+/*.rect{
+    background: url('../images/shapes.png');
+}*/
+
+.shape-picker {
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #E6E6E6;
+}
+
+.canvas-wrap {
+    border: 1px solid #cecece;
+    margin: 2px;
+    border-radius: 4px;
+    padding: 5px;
+    background: url(../images/checkered-overlay-bg.png);
+    position: relative;
+    overflow: hidden;
+    max-width: 75%;
+    width: 1500px;
+}
+
+.shape-context-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.title-bar {
+    font-size: 12px;
+    font-family: verdana;
+    background: #5F5F5F;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+button.shape-btn {
+    margin: 1px;
+    padding: 4px;
+    background: #F0F0F0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 0px #CACACA;
+}
+
+button.shape-btn:hover{
+    background: #F5F5F5;
+    box-shadow: none;
+}
+
+.action-wrapper {
+    max-width: 22%;
+    width: 290px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}

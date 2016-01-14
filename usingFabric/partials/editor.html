@@ -1,0 +1,46 @@
+<div class="editor-container">
+    <div class="pop-up input" style="display:none">
+        <div>
+            <span>Enter the width of the drawing : </span>
+            <input type="text" ng-model="vm.width">
+        </div>
+        <div>
+            <span>Enter the height of the drawing : </span>
+            <input type="text" ng-model="vm.height">
+        </div>
+        <a href="javascript:void(0);" ng-click="vm.setCanvasSize">Ok</a>
+    </div>
+    <div class="shape-picker">
+        <div class="title-bar">Toolbar/Shape picker</div>
+        <button type="button" class="shape-btn rect" ng-click="vm.selectShape('rect')">Rectangle</button>
+        <button type="button" class="shape-btn circle" ng-click="vm.selectShape('circle')">Circle</button>
+        <button type="button" class="shape-btn triangle" ng-click="vm.selectShape('triangle')">Triangle</button>
+        <button type="button" class="shape-btn line" ng-click="vm.selectShape('line')">Line</button>
+        <button type="button" class="shape-btn text" ng-click="vm.selectShape('text')">Text</button>
+        <button type="button" class="shape-btn image" ng-click="vm.selectShape('image')">Image</button>
+    </div>
+    <div class="canvas-wrap float-left">
+        <div class="title-bar">Drawing Board</div>
+        <canvas id="canvas" ng-class="{canvasActive : vm.drawingEnabled}"
+                ng-mousedown="vm.initializeShape($event)"
+                ng-mousemove="vm.drawShape($event)"
+                ng-mouseup="vm.finalizeShape()">
+        </canvas>
+        <div class="shape-context-menu" ng-style="vm.contextMenuStyle" ng-show="vm.showContextMenu">
+            <div>Send To Back</div>
+            <div>Send Backwards</div>
+            <div>Bring To front</div>
+            <div>Bring Forwards</div>
+        </div>
+    </div>
+    <div class="action-wrapper float-left">
+        <div class="title-bar">Template Actions</div>
+        <!--<input type="range" ng-model="vm.myRange">{{vm.myRange}}-->
+        Color : <input type="color" ng-model="vm.activeColor">
+        
+        
+        
+        <button type="button" ng-click="vm.save()">Save</button>
+    </div>
+    <div class="clear-float"></div>
+</div>

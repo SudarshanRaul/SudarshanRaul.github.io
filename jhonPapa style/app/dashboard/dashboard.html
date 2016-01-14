@@ -1,0 +1,106 @@
+<div class="dashboard-container">
+    <div class="left-container col-md-3">
+        <div class="collection-tree-wrap">
+            <collection vm="vm" collection="vm.collection"></collection>
+        </div>
+    </div>
+    <div class="right-container col-md-9">
+        <div class="display-node-details" ng-show="vm.displayNodeDetails">
+            <div class="node-title">
+                {{vm.showDetails.title}}
+            </div>
+            <!--<div class="node-id">
+                {{vm.showDetails.id}}
+            </div>-->
+            <div class="node-details" ng-bind-html="vm.showDetails.description">
+                
+            </div>
+            <div class="node-hasEquipments">
+                Equipment Present : {{vm.showDetails.isEquipmentPresent || false}}
+                <br/><a href="javascript:void(0);" ng-show="vm.showDetails.isEquipmentPresent" ng-click="vm.showImage=true;">Show Images</a>
+            </div>
+            <div ng-show="vm.showImage" class="equipments-image-wrap">
+                <div ng-repeat="image in vm.showDetails.equipments">
+                    <div>{{image.title}}</div>
+                    <img ng-src="image.imageUrl"/>
+                    <div>{{image.imageWidth}}</div>
+                    <div>{{image.imageHeight}}</div>
+                    <div>{{image.description}}</div>
+                    <div>{{image.url}}</div>
+                </div>
+            </div>
+            <div class="edit-link-wrap">
+                <a href="javascript:void(0);" ng-click="vm.editNode();" class="button primary-button">edit</a>
+            </div>
+        </div>
+        <div class="edit-node-details" ng-show="vm.editNodeDetails">
+            <div class="node-title">
+                Title : <input type=text ng-model="vm.showDetails.title"/>
+            </div>
+            <div class="node-id">
+                ID : {{vm.showDetails.id}}
+            </div>
+            <div class="node-details">
+                <div text-angular ng-model="vm.showDetails.description" name="description-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around" class="details-editor"></div>
+                <div class="rawHtml">
+                    <div class="rawHtml-head">Raw HTML</div>
+                    <div class="rawHtml-code">{{vm.showDetails.description}}</div>
+                </div>
+            </div>
+            <div class="node-hasEquipments">
+                <input type="checkbox" ng-model="vm.showDetails.isEquipmentPresent"/> Add Equipment
+                <form ng-show="vm.showDetails.isEquipmentPresent">
+                    Image Path : <input type="text" ng-model="vm.temp.equipments.imageUrl"><br/>
+                    Image name : <input type="text" ng-model="vm.temp.equipments.title"><br/>
+                    Image Description : <input type="text" ng-model="vm.temp.equipments.description"><br/>
+                    Image Linked to : <input type="text" ng-model="vm.temp.equipments.url"><br/>
+                    <a href="javascript:void(0);" ng-click="vm.addImage();">Add Image</a>
+                </form>
+            </div>
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" ng-click="vm.saveNode();" class="button primary-button">Save</a>
+                <a href="javascript:void(0);" ng-click="vm.unSaveNode();" class="button secondary-button">Cancel</a>
+            </div>
+        </div>
+        <div class="svg-container">
+            <svg width="800" height="800" style="border:1px solid #ccc;">
+                <polygon points="10,250 760,250 760,240 790,255 760,270 760,260 10,260" stroke-width="1" fill="#0A5982" fill-opacity="0.5"/>
+                <g ng-repeat="item in vm.collection">
+                    <polygon ng-attr-points="{{item.x-10}},{{item.y+15}} {{item.x+10}},{{item.y-15}} {{item.x+110}},{{item.y-15}} {{item.x+90}},{{item.y+15}}" stroke-width="2" fill="none" stroke="#ccc"/>
+                    <path ng-attr-d="M {{item.x-50}} {{item.y+5}}
+                             l 10 -10
+                             l 80 0
+                             l 10 10
+                             l 0 10
+                             l -10 10
+                             l -80 0
+                             l -10 -10"/>
+                        <text ng-attr-x={{item.x+10}} ng-attr-y={{item.y-10}} fill="#FFF" ng-click='vm.showNode(item);'>{{item.title}}</text>
+                </g>                
+            </svg>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <svg width="800" height="500" style="border:1px solid #ccc;">
+        <path d="M 200 50 
+                 l 0 20
+                 q 0 20 -20 20
+                 l -130 0
+                 q -20 0 -20 20
+                 l 0 20" stroke="#ccc" stroke-width="1" stroke-dasharray="5 5" fill="none" />
+        <path d="M 250 50 
+                 l 0 20
+                 q 0 20 20 20
+                 l 130 0
+                 q 20 0 20 20
+                 l 0 20" stroke="#ccc" stroke-width="1" stroke-dasharray="5 5" fill="none" />
+        <path d="M 100 450
+                 l 0 -100
+                 q 0 -10 10 -10
+                 l 180 0
+                 l 30 -30
+                 l 150 0"
+              stroke="#cecece" stroke-width="2" fill="none  "/>
+        <polygon points="10,250 760,250 760,240 790,255 760,270 760,260 10,260" stroke-width="1" fill="#0A5982"/>
+    </svg>
+</div>
