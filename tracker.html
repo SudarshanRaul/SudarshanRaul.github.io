@@ -11,13 +11,27 @@
 	<body>
 		<div class="container">
 			<form>
+				<h3>
+					Add Expence
+				</h3>
+				<h3>
+					<small>
+						Total Monthly Expense : 
+					</small>
+				</h3>
+				<h3>
+					<small>
+						Average Monthly Expense : 
+					</small>
+				</h3>
 				<div class="form-group">
 					<input type="text" class="form-control" id="particular" placeholder="particular" />
-					<br />
-					<input type="number" class="form-control" id="cost" placeholder="cost" />
-					<br />
+				</div>
+				<div class="form-group">
+					<input type="number" class="form-control" id="cost" step="0.01" placeholder="cost" />
+				</div>
+				<div class="form-group">
 					<input type="date" class="form-control" id="date" placeholder="date" />
-					<br />
   				</div>
 				<button type="submit" class="btn btn-primary">Add</button>
 				<button type="submit" class="btn btn-danger">Clear</button>
