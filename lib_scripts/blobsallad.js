@@ -1,4 +1,4 @@
-  */
+  /*
   http://www.blobsallad.se
   bjoern.lindberg@gmail.com
   /*
