@@ -1,0 +1,26 @@
+(function () {
+    //initilaize the bab
+    init();
+    //disable gravity
+    toggleGravity();
+    var maxSplit = 10;
+    var currentSplit = 0;
+    //split every 40 seconds
+    var babSpliter = windows.setInterval(function() {
+        blobColl.split();
+        currentSplit++;
+        if (currentSplit > 9) {
+            currentSplit = 0;
+            windows.clearInterval(babSpliter);
+        }
+    }, 40*1000);
+    //join every 40 seconds
+    var babJoin = windowa.setInterval(function() {
+        blobColl.join();
+        currentSplit++;
+        if (currentSplit > 9) {
+            currentSplit = 0;
+            windows.clearInterval(babJoin);
+        }
+    }, 40 * 1000);
+}());
