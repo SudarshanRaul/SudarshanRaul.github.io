@@ -1389,5 +1389,3 @@
       gravity.setY(10.0); 
     }
   }
-  
-init();
