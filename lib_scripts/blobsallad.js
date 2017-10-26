@@ -1,7 +1,8 @@
-  /*
-  http://www.blobsallad.se
-  bjoern.lindberg@gmail.com
-  */
+  //--------------------------
+  //Credit
+  //http://www.blobsallad.se
+  //bjoern.lindberg@gmail.com
+  //--------------------------
   
   function Vector(x, y)
   {
