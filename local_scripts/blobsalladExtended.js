@@ -6,21 +6,21 @@
     var maxSplit = 10;
     var currentSplit = 0;
     //split every 40 seconds
-    var babSpliter = windows.setInterval(function() {
+    var babSpliter = window.setInterval(function() {
         blobColl.split();
         currentSplit++;
         if (currentSplit > 9) {
             currentSplit = 0;
-            windows.clearInterval(babSpliter);
+            window.clearInterval(babSpliter);
         }
     }, 40*1000);
     //join every 40 seconds
-    var babJoin = windowa.setInterval(function() {
+    var babJoin = window.setInterval(function() {
         blobColl.join();
         currentSplit++;
         if (currentSplit > 9) {
             currentSplit = 0;
-            windows.clearInterval(babJoin);
+            window.clearInterval(babJoin);
         }
     }, 40 * 1000);
 }());
