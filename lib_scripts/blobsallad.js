@@ -1361,7 +1361,7 @@
       savedMouseCoords = mouseCoords; 
     }
     
-    env = new Environment(0.2, 0.2, 2.6, 1.6); 
+    env = new Environment(0, 0, 0, 0); 
     blobColl = new BlobCollective(1.0, 1.0, 1, 200); 
     gravity = new Vector(0.0, 10.0); 
     stopped = false; 
