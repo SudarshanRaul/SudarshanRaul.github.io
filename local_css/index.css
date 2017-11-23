@@ -34,7 +34,6 @@ nav {
 .about-content {
     position: absolute;
     top: 50%;
-    font-family: 'Calligraffitti', cursive;
     width: 100%;
 }
 
@@ -42,6 +41,7 @@ nav {
     margin: 0 auto;
     width: 400px;
     text-align: center;
+    font-family: 'Princess Sofia', cursive;
 }
 
 header.header {
