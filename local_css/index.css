@@ -1,6 +1,7 @@
 nav {
     position: fixed;
     right: 0;
+    top: 0;
     width: 200px;
     max-width: 20%;
     height: 100vh;
@@ -13,4 +14,19 @@ nav {
     border: 1px solid;
     height: 200px;
     box-shadow: -10px 0 25px 0px #e0ebe8;
+}
+
+.parallax {
+    /* Full height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax.about-parallax {
+    background-image: url('http://www.rubberducky.org/blog/wp-content/uploads/2012/08/tower-fairytale-wallpapers-papers-background-vectors-desktop-255261.jpg');
 }
