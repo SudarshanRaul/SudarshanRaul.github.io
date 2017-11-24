@@ -34,11 +34,15 @@ nav {
 }
 
 .parallax.about-parallax {
-    background-image: url('http://www.rubberducky.org/blog/wp-content/uploads/2012/08/tower-fairytale-wallpapers-papers-background-vectors-desktop-255261.jpg');
+    background-image: url('./local_images/tower-fairytale.jpg');
 }
 
 .parallax.web-dev-parallax {
-    background-image: url('https://www.webakruti.com/wp-content/uploads/2017/01/List-of-Web-Desining-Web-Development-Programming-Languages.jpg');
+    background-image: url('./local_images/web-designing.jpg');
+}
+
+.parallax.rubiks-parallax {
+    background-image: url('./local_images/rubiks.jpg');
 }
 
 .about-content {
