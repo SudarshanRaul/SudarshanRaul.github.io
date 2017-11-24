@@ -1,3 +1,7 @@
+body {
+    text-shadow: 4px 0px 5px #00000085;
+}
+
 nav {
     position: fixed;
     right: 0;
@@ -50,12 +54,39 @@ nav {
     font-family: 'Princess Sofia', cursive;
 }
 
+.about-content h.header {
+    color: #2e8127;
+}
+
 header.header {
     font-size: 50px;
-    color: #2e8127;
+}
+
+.about-content .sub-header {
+    color: #a7d99f;
 }
 
 header.sub-header {
     font-size: 34px;
-    color: #a7d99f;
+}
+
+.intro-content {
+    position: absolute;
+    width: 100%;    
+    color: #7ac6e2;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 24px;
+}
+
+.intro-content header {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    color: #2585ad;
+}
+
+.intro-content article {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
 }
