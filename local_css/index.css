@@ -34,15 +34,15 @@ nav {
 }
 
 .parallax.about-parallax {
-    background-image: url('./local_images/tower-fairytale.jpg');
+    background-image: url('../local_images/tower-fairytale.jpg');
 }
 
 .parallax.web-dev-parallax {
-    background-image: url('./local_images/web-designing.jpg');
+    background-image: url('../local_images/web-designing.jpg');
 }
 
 .parallax.rubiks-parallax {
-    background-image: url('./local_images/rubiks.jpg');
+    background-image: url('../local_images/rubiks.jpg');
 }
 
 .about-content {
