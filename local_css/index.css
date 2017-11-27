@@ -45,6 +45,10 @@ nav {
     background-image: url('../local_images/rubiks.jpg');
 }
 
+.parallax.minion-parallax {
+    background-image: url('../local_images/minion.jpg');
+}
+
 .about-content {
     position: absolute;
     top: 0;
@@ -118,4 +122,12 @@ header.sub-header {
     width: 400px;
     margin: 0 auto;
     text-align: center;
+}
+
+.minion-content {
+    position: absolute;
+    width: 100%;    
+    color: #FFF;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 24px;
 }
