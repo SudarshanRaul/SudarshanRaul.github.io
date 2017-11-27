@@ -8,6 +8,7 @@ $(document).ready(function(){
 	
 	//Reset : scroll to 0
 	function reset() {
+		console.log("resetting");
 		scrollHeight = 0;
 		if(scrollTimer) {
 			clearInterval(scrollTimer);
@@ -23,7 +24,9 @@ $(document).ready(function(){
 	function scrollBody() {
 		if(scrollHeight >= documentHeight){
 			reset();
+			return;
 		}
+		console.log("scrooling to " + scrollHeight);
 		$('body,html').animate({scrollTop: scrollHeight}, scrollTime);
 		scrollHeight = scrollHeight + (windowHeight * 1.75);
 	}
