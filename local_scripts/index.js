@@ -17,7 +17,7 @@ $(document).ready(function(){
 	}
 	reset();
 	
-	scrollTimer = window.setInterval (scrollBody, scrollDelay);
+	//scrollTimer = window.setInterval (scrollBody, scrollDelay);
 	
 	function scrollBody() {
 		if(scrollHeight >= documentHeight){
