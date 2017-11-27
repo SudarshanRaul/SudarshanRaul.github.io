@@ -7,7 +7,7 @@ $(document).ready(function(){
 	
 	//Reset : scroll to 0
 	function reset() {
-		scrollHeight = windowHeight * 2;
+		scrollHeight = windowHeight * 1.75;
 		$('body,html').animate({scrollTop: 0}, scrollTime);
 	}
 	reset();
@@ -22,6 +22,6 @@ $(document).ready(function(){
 		}
 		$('body,html').animate({scrollTop: scrollHeight}, scrollTime);
 		console.log(scrollHeight);
-		scrollHeight = scrollHeight + (windowHeight);
+		scrollHeight = scrollHeight + (windowHeight * 1.75);
 	}
 });
