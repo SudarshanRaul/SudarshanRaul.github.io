@@ -8,12 +8,13 @@ $(document).ready(function(){
 	
 	//Reset : scroll to 0
 	function reset() {
-		scrollHeight = windowHeight * 1.75;
+		scrollHeight = 0;
 		if(scrollTimer) {
 			clearInterval(scrollTimer);
 		}
-		$('body,html').animate({scrollTop: 0}, scrollTime-200);
-		scrollTimer = window.setInterval (scrollBody, scrollDelay);
+		$('body,html').animate({scrollTop: scrollHeight}, scrollTime-200, function() {
+			scrollTimer = window.setInterval (scrollBody, scrollDelay);
+		});
 	}
 	reset();
 	
