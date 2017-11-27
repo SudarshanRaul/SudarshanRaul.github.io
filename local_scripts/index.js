@@ -14,9 +14,8 @@ $(document).ready(function(){
 			console.log("clearing " + scrollTimer);
 			clearInterval(scrollTimer);
 		}
-		$('body,html').animate({scrollTop: scrollHeight}, scrollTime-200, function() {
-			scrollTimer = window.setInterval (scrollBody, scrollDelay);
-		});
+		$('body,html').animate({scrollTop: scrollHeight}, scrollTime-200);
+		scrollTimer = window.setInterval (scrollBody, scrollDelay);
 	}
 	reset();
 	
