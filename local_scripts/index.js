@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var windowHeight = $(window).height();
 	var documentHeight = $(document).height();
-	var scrollTime = 600;
-	var scrollDelay = 5000;
+	var scrollTime = 500;
+	var scrollDelay = 7000;
 	var scrollHeight;
 	var scrollTimer;
 	
@@ -11,6 +11,7 @@ $(document).ready(function(){
 		console.log("resetting");
 		scrollHeight = 0;
 		if(scrollTimer) {
+			console.log("clearing " + scrollTimer);
 			clearInterval(scrollTimer);
 		}
 		$('body,html').animate({scrollTop: scrollHeight}, scrollTime-200, function() {
@@ -22,12 +23,12 @@ $(document).ready(function(){
 	//scrollTimer = window.setInterval (scrollBody, scrollDelay);
 	
 	function scrollBody() {
-		if(scrollHeight >= documentHeight){
+		if(scrollHeight >= documentHeight) {
 			reset();
-			return;
+		} else {
+			console.log("scrooling to " + scrollHeight);
+			$('body,html').animate({scrollTop: scrollHeight}, scrollTime);
+			scrollHeight = scrollHeight + (windowHeight * 1.75);
 		}
-		console.log("scrooling to " + scrollHeight);
-		$('body,html').animate({scrollTop: scrollHeight}, scrollTime);
-		scrollHeight = scrollHeight + (windowHeight * 1.75);
 	}
 });
