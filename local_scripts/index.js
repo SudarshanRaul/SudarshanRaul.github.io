@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var windowHeight = $(window).height();
 	var documentHeight = $(document).height();
-	var scrollTime = 500;
-	var scrollDelay = 7000;
+	var scrollTime = 1000;
+	var scrollDelay = 10000;
 	var scrollHeight;
 	var scrollTimer;
 	
