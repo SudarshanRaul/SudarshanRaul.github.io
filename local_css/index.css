@@ -131,3 +131,16 @@ header.sub-header {
     font-family: 'Calligraffitti', cursive;
     font-size: 24px;
 }
+
+.minion-content header {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.minion-content article {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
