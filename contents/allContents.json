@@ -1,56 +1,56 @@
 {
-  aboutPage: [{
-    parallaxClass: "about-parallax",
-    contentClass: "about-content",
-    contentId: "about-content",
-    hasHeader: true,
-    hasSubHeader: true,
-    hasArticle: false,
-    header: [
+  "aboutPage": [{
+    "parallaxClass": "about-parallax",
+    "contentClass": "about-content",
+    "contentId": "about-content",
+    "hasHeader": true,
+    "hasSubHeader": true,
+    "hasArticle": false,
+    "header": [
       "I'm Sudarshan"
     ],
-    subHeader: [
+    "subHeader": [
       "UI Developer",
       "Rubiks Cuber",
       "Minioner"
     ]
   },{
-    parallaxClass: "web-dev-parallax",
-    contentClass: "intro-content",
-    contentId: "intro-content",
-    hasHeader: false,
-    hasSubHeader: true,
-    hasArticle: true,
-    subHeader: [
+    "parallaxClass": "web-dev-parallax",
+    "contentClass": "intro-content",
+    "contentId": "intro-content",
+    "hasHeader": false,
+    "hasSubHeader": true,
+    "hasArticle": true,
+    "subHeader": [
       "Hi, I'm UI Developer"
     ],
-    article: [
+    "article": [
       "Hi, I'm UI Developer based in Bangalore/Pune, India. I've passion for creating <strong>WoWP</strong> (Wonderfull Web Pages) for desktop and mobile."
     ]
   },{
-    parallaxClass: "rubiks-parallax",
-    contentClass: "rubiks-content",
-    contentId: "rubiks-content",
-    hasHeader: false,
-    hasSubHeader: true,
-    hasArticle: true,
-    subHeader: [
+    "parallaxClass": "rubiks-parallax",
+    "contentClass": "rubiks-content",
+    "contentId": "rubiks-content",
+    "hasHeader": false,
+    "hasSubHeader": true,
+    "hasArticle": true,
+    "subHeader": [
       "I'm a cuber as well"
     ],
-    article: [
+    "article": [
       "I'm a cuber as well. I solve Rubiks cube in less than two minutes which is making correct one out of 43 quintillion possible combinations."
     ]
   },{
-    parallaxClass: "minion-parallax",
-    contentClass: "minion-content",
-    contentId: "minion-content",
-    hasHeader: false,
-    hasSubHeader: true,
-    hasArticle: true,
-    subHeader: [
+    "parallaxClass": "minion-parallax",
+    "contentClass": "minion-content",
+    "contentId": "minion-content",
+    "hasHeader": false,
+    "hasSubHeader": true,
+    "hasArticle": true,
+    "subHeader": [
       "Bello..."
     ],
-    article: [
+    "article": [
       "Belloo... Ka ern Minions."
     ]
   }]
