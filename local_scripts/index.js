@@ -5,6 +5,9 @@ $(document).ready(function(){
 	var scrollTime = 700;
 	var scrollDelay = 2000;
 	
+	//Reset : scroll to 0
+	$('body,html').animate({scrollTop: 0}, scrollTime);
+	
 	window.setInterval (function() {
 		$('body,html').animate({scrollTop: scrollHeight}, scrollTime);
 		console.log(scrollHeight);
