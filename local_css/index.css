@@ -37,7 +37,11 @@ nav {
 
     .parallax {
         width: 100%;
-        height: auto;
+        height: 200px;
+    }
+    
+    body {
+        border: 1px solid;
     }
 
 }
