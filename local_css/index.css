@@ -24,7 +24,7 @@ nav {
     position: rellative;
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 920px) {
 
     .parallax {
         /* Full height */
@@ -41,7 +41,7 @@ nav {
     
 }
 
-@media only screen and (max-width: 779px) {
+@media only screen and (max-width: 919px) {
 
     .parallax {
         width: 100%;
