@@ -21,27 +21,19 @@ nav {
 }
 
 .parallax {
+    /* Full height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     position: rellative;
 }
 
-@media only screen and (min-width: 920px) {
-
-    .parallax {
-        /* Full height */
-        height: 100vh; 
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        position: rellative;
-    }
-    
-}
-
-@media only screen and (max-width: 919px) {
+@media only screen and (max-width: 768px) {
 
     .parallax {
         width: 100%;
