@@ -1,0 +1,19 @@
+<div class="add-exp-wrapper">
+	<div class="exp-date-wrap">
+		<label>Date</label>
+		<input type="text" name="date" [(ngModel)]="date" />
+	</div>
+	<div class="exp-particular-wrap">
+		<label>Particular</label>
+		<input type="text" name="particular" [(ngModel)]="particular" />
+	</div>
+	<div class="exp-category-wrap">
+		<label>Category</label>
+		<input type="text" name="category" [(ngModel)]="category" />
+	</div>
+	<div class="exp-cost-wrap">
+		<label>Cost</label>
+		<input type="number" name="cost" [(ngModel)]="cost" />
+	</div>
+	<button (click)="addNewExp($event)">Add</button>
+</div>
