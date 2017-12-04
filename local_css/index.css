@@ -173,20 +173,24 @@ header.sub-header {
         font-size: 24px;
     }
     
+    article {
+        font-size: 20px;
+    }
+    
     .about-content header,
     .intro-content header,
     .intro-content article,
     .rubiks-content header,
     .rubiks-content article,
     .minion-content header,
-    .minion-content article{
+    .minion-content article {
         width: auto;
     }
-    
-    .parallax.web-dev-parallax:first-child,
-    .parallax.rubiks-parallax:first-child,
-    .parallax.minion-parallax:first-child {
-        display: none;
+
+    .intro-content,
+    .rubiks-content,
+    .minion-content {
+        transform: initial;
     }
 
 }
