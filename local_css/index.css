@@ -185,9 +185,9 @@ header.sub-header {
         width: auto;
     }
     
-    .parallax.web-dev-parallax :first-child,
-    .parallax.rubiks-parallax :first-child,
-    .parallax.minion-parallax :first-child {
+    .parallax.web-dev-parallax:first-child,
+    .parallax.rubiks-parallax:first-child,
+    .parallax.minion-parallax:first-child {
         display: none;
     }
 
