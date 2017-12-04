@@ -159,12 +159,7 @@ header.sub-header {
         margin: 0;
         padding: 0;
     }
-    
-    .about-content {
-        margin: 0;
-        width: 100%;
-    }
-    
+        
     header.header {
         font-size: 28px;
     }
@@ -187,10 +182,11 @@ header.sub-header {
         width: auto;
     }
 
+    .about-content,
     .intro-content,
     .rubiks-content,
     .minion-content {
-        transform: initial;
+        transform: translateY(50%);
         width: calc(100% - 2px);
         margin: auto;
     }
