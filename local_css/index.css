@@ -85,12 +85,18 @@ header.sub-header {
     font-size: 34px;
 }
 
-.intro-content {
+.intro-content,
+.rubiks-content,
+.minion-content {
     position: absolute;
     width: 100%;    
-    color: #7ac6e2;
     font-family: 'Calligraffitti', cursive;
     font-size: 24px;
+    transform: translateY(calc(50vh - 105px));
+}
+
+.intro-content {
+    color: #7ac6e2;
 }
 
 .intro-content header {
@@ -106,12 +112,8 @@ header.sub-header {
     text-align: center;
 }
 
-.rubiks-content {
-    position: absolute;
-    width: 100%;    
+.rubiks-content {    
     color: #FFF;
-    font-family: 'Calligraffitti', cursive;
-    font-size: 24px;
 }
 
 
@@ -128,12 +130,8 @@ header.sub-header {
     text-align: center;
 }
 
-.minion-content {
-    position: absolute;
-    width: 100%;    
-    color: #FFF;
-    font-family: 'Calligraffitti', cursive;
-    font-size: 24px;
+.minion-content {    
+    color: #FFF
 }
 
 .minion-content header {
