@@ -182,7 +182,11 @@ header.sub-header {
         width: auto;
     }
 
-    .about-content,
+    .about-content {
+        width: calc(100% - 2px);
+        margin: auto; 
+    }
+    
     .intro-content,
     .rubiks-content,
     .minion-content {
