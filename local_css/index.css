@@ -180,14 +180,14 @@ header.sub-header {
     .intro-content article,
     .rubiks-content header,
     .rubiks-content article,
-    .minion-content header
+    .minion-content header,
     .minion-content article{
         width: auto;
     }
     
-    .parallax .web-dev-parallax :first-child,
-    .parallax .rubiks-parallax :first-child,
-    .parallax .minion-parallax :first-child {
+    .parallax.web-dev-parallax :first-child,
+    .parallax.rubiks-parallax :first-child,
+    .parallax.minion-parallax :first-child {
         display: none;
     }
 
