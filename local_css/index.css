@@ -184,7 +184,7 @@ header.sub-header {
 
     .about-content {
         width: calc(100% - 2px);
-        margin: auto; 
+        margin-top: 0; 
     }
     
     .intro-content,
