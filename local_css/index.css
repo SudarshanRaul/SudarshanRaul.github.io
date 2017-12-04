@@ -89,7 +89,7 @@ header.sub-header {
 .rubiks-content,
 .minion-content {
     position: absolute;
-    width: 100%;    
+    width: calc(100% - 2px);    
     font-family: 'Calligraffitti', cursive;
     font-size: 24px;
     transform: translateY(calc(50vh - 105px));
@@ -166,15 +166,15 @@ header.sub-header {
     }
     
     header.header {
-        font-size: 36px;
+        font-size: 28px;
     }
     
     header.sub-header {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     article {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .about-content header,
