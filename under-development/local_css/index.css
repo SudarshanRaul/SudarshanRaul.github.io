@@ -1,4 +1,7 @@
 body {
     text-shadow: 4px 0px 5px #00000085;
+}
+
+body, #app-container{
     min-height: 100vh;
 }
