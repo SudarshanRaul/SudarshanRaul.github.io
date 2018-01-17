@@ -29,22 +29,38 @@ var AddSbmData = React.createClass({
 
 		return (
 			<div className="sbm-add-container">
-				<div className="input-wrapper">
-					<div>
-						<lable>Date</lable>
-						<input type="date" value={this.state.date} onChange={(event) => this.updateState('date', event.target.value)} />
+				<div className="input-wrapper" style={style().table}>
+					<div style={style().tableRow}>
+						<div style={style().tableCell}>
+							<lable>Date</lable>
+						</div>
+						<div style={style().tableCell}>
+							<input type="date" value={this.state.date} onChange={(event) => this.updateState('date', event.target.value)} />
+						</div>
 					</div>
-					<div>
-						<lable>Description</lable>
-						<input type="text" value={this.state.description} onChange={(event) => this.updateState('description', event.target.value)} />
+					<div style={style().tableRow}>
+						<div style={style().tableCell}>
+							<lable>Description</lable>
+						</div>
+						<div style={style().tableCell}>
+							<input type="text" value={this.state.description} onChange={(event) => this.updateState('description', event.target.value)} />
+						</div>
 					</div>
-					<div>
-						<lable>Value</lable>
-						<input type="number" value={this.state.value} onChange={(event) => this.updateState('value', event.target.value)} />
+					<div style={style().tableRow}>
+						<div style={style().tableCell}>
+							<lable>Value</lable>
+						</div>
+						<div style={style().tableCell}>
+							<input type="number" value={this.state.value} onChange={(event) => this.updateState('value', event.target.value)} />
+						</div>
 					</div>
-					<div>
-						<lable>Tags</lable>
-
+					<div style={style().tableRow}>
+						<div style={style().tableCell}>
+							<lable>Tags</lable>
+						</div>
+<div style={style().tableCell}>
+	
+</div>
 					</div>
 					<div>
 						<button onClick={this.addData}>Add</button>
