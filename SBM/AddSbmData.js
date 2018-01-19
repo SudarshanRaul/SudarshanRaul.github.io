@@ -5,8 +5,23 @@ var AddSbmData = React.createClass({
 			date: "",
 			description: "",
 			value: 0,
-			selectedTag: []
+			selectedTag: [],
+			outgoing: true
 		}
+	},
+
+	componentWillReceiveProps: function(newProps) {
+		if(!newProps.currentData){
+			return
+		}
+		let newState = JSON.parse(newProps.currentData);
+		this.setState({
+			date: newState.date,
+			description: newState.description,
+			value: newState.value,
+			selectedTag: newState.selectedTag,
+			outgoing : newState.outgoing
+		})
 	},
 
 	updateState : function (stateName, newValue) {
@@ -20,9 +35,11 @@ var AddSbmData = React.createClass({
 			date : this.state.date,
 			description : this.state.description,
 			value : this.state.value,
-			selectedTag : this.state.selectedTag
+			selectedTag : this.state.selectedTag,
+			outgoing : this.state.outgoing
 		};
 		this.props.sbmPush(newData);
+		this.setState(this.getInitialState());
 	},
 
 	render: function() {
@@ -52,6 +69,14 @@ var AddSbmData = React.createClass({
 						</div>
 						<div style={style().tableCell}>
 							<input type="number" value={this.state.value} onChange={(event) => this.updateState('value', event.target.value)} />
+						</div>
+					</div>
+					<div style={style().tableRow}>
+						<div style={style().tableCell}>
+							<lable></lable>
+						</div>
+						<div style={style().tableCell}>
+							<input type="checkbox" value={this.state.outgoing} onChange={(event) => this.updateState('outgoing', !this.state.outgoing)} />
 						</div>
 					</div>
 					<div style={style().tableRow}>

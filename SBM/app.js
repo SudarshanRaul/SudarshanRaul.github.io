@@ -3,16 +3,31 @@ var App = React.createClass({
 	getInitialState: function() {
 		return {
 			sbmData : this.fetchFromStorage("sbmData", []),
-			sbmCategory : this.fetchFromStorage("sbmCategory", [])
+			sbmCategory : this.fetchFromStorage("sbmCategory", []),
+			currentData : "",
+			currentIndex : -1
 		}
 	},
 
 	sbmPush: function (newData) {
 		let sbmData = this.state.sbmData;
-		sbmData.push(newData);
+		if(this.state.currentIndex === -1){
+			sbmData.push(newData);
+		}else{
+			sbmData[this.state.currentIndex] = newData;
+		}
 		this.setState({
-			sbmData: sbmData
+			sbmData: sbmData,
+			currentData : "",
+			currentIndex : -1
 		}, this.updateStorage)
+	},
+
+	editData: function(index) {
+		this.setState({
+			currentData : JSON.stringify(this.state.sbmData[index]),
+			currentIndex : index
+		});
 	},
 
 	updateStorage: function() {
@@ -35,8 +50,8 @@ var App = React.createClass({
 
 		return (
 			<div className="sbm-container">
-				<AddSbmData sbmPush={this.sbmPush} tags={this.state.sbmCategory} ></AddSbmData>
-				<ListSbmData sbmData={this.state.sbmData} />
+				<AddSbmData sbmPush={this.sbmPush} tags={this.state.sbmCategory} currentData={this.state.currentData}></AddSbmData>
+				<ListSbmData sbmData={this.state.sbmData} editData={this.editData} />
 			</div>
 		);
 	}	

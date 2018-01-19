@@ -17,6 +17,11 @@ var ListSbmData = React.createClass({
 							<div>{sbmCard.date}</div>
 							<div>{sbmCard.description}</div>
 							<div>{sbmCard.value}</div>
+							<div>
+								<a href="javascript:void(0)" onClick={() => this.props.editData(index)}>edit</a>
+								&nbsp;&nbsp;
+								<a href="javascript:void(0)" >delete</a>
+							</div>
 						</div>
 					)
 				})}

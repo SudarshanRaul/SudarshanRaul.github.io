@@ -8,7 +8,8 @@ function style (requestedStyles) {
 			display: "table-row"
 		},
 		tableCell : {
-			display: "table-cell"
+			display: "table-cell",
+			padding: "2px 5px"
 		},
 		card : {
 		    display: "inline-block",
@@ -17,19 +18,6 @@ function style (requestedStyles) {
 		    padding: "2px"
 		}
 	};
-
-	function setMargin() {
-
-	}
-
-	function setPadding() {
-
-	}
-
-	function setFont() {
-
-	}
-
 
 	return styles;
 }
