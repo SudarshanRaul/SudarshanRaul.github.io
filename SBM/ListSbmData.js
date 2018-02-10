@@ -1,8 +1,8 @@
 var ListSbmData = React.createClass({
-	
+
 	getInitialState: function() {
 		return {
-			
+
 		}
 	},
 
@@ -20,12 +20,12 @@ var ListSbmData = React.createClass({
 							<div>
 								<a href="javascript:void(0)" onClick={() => this.props.editData(index)}>edit</a>
 								&nbsp;&nbsp;
-								<a href="javascript:void(0)" >delete</a>
+								<a href="javascript:void(0)" onClick={() => this.props.deleteData(index)}>delete</a>
 							</div>
 						</div>
 					)
 				})}
 			</div>
 		);
-	}	
+	}
 });

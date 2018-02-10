@@ -1,5 +1,5 @@
 var AddSbmData = React.createClass({
-	
+
 	getInitialState: function() {
 		return {
 			date: "",
@@ -73,10 +73,10 @@ var AddSbmData = React.createClass({
 					</div>
 					<div style={style().tableRow}>
 						<div style={style().tableCell}>
-							<lable></lable>
+							<lable>Out Going</lable>
 						</div>
 						<div style={style().tableCell}>
-							<input type="checkbox" value={this.state.outgoing} onChange={(event) => this.updateState('outgoing', !this.state.outgoing)} />
+							<input type="checkbox" checked={this.state.outgoing} onChange={(event) => this.updateState('outgoing', !this.state.outgoing)} />
 						</div>
 					</div>
 					<div style={style().tableRow}>
@@ -84,7 +84,7 @@ var AddSbmData = React.createClass({
 							<lable>Tags</lable>
 						</div>
 <div style={style().tableCell}>
-	
+
 </div>
 					</div>
 					<div>
@@ -94,5 +94,5 @@ var AddSbmData = React.createClass({
 				</div>
 			</div>
 		);
-	}	
+	}
 });

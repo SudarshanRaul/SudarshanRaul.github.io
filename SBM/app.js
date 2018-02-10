@@ -1,5 +1,5 @@
 var App = React.createClass({
-	
+
 	getInitialState: function() {
 		return {
 			sbmData : this.fetchFromStorage("sbmData", []),
@@ -30,6 +30,14 @@ var App = React.createClass({
 		});
 	},
 
+	deleteData: function(index) {
+		let sbmData = this.state.sbmData;
+		sbmData.splice(index, 1);
+		this.setState({
+			sbmData : sbmData
+		});
+	},
+
 	updateStorage: function() {
 		let sbmMasterData = {
 			sbmData : this.state.sbmData,
@@ -41,7 +49,7 @@ var App = React.createClass({
 	fetchFromStorage: function(key, defaultValue) {
 		let sbmMasterData = localStorage.getItem("SBM_Master_Data");
 		if(sbmMasterData){
-			return JSON.parse(sbmMasterData)[key];			
+			return JSON.parse(sbmMasterData)[key];
 		}
 		return defaultValue
 	},
@@ -51,10 +59,10 @@ var App = React.createClass({
 		return (
 			<div className="sbm-container">
 				<AddSbmData sbmPush={this.sbmPush} tags={this.state.sbmCategory} currentData={this.state.currentData}></AddSbmData>
-				<ListSbmData sbmData={this.state.sbmData} editData={this.editData} />
+				<ListSbmData sbmData={this.state.sbmData} editData={this.editData} deleteData={this.deleteData} />
 			</div>
 		);
-	}	
+	}
 });
 
 
