@@ -27,7 +27,7 @@ var App = React.createClass({
 		this.setState({
 			currentData : JSON.stringify(this.state.sbmData[index]),
 			currentIndex : index
-		});
+		}, this.updateStorage);
 	},
 
 	deleteData: function(index) {
@@ -35,7 +35,7 @@ var App = React.createClass({
 		sbmData.splice(index, 1);
 		this.setState({
 			sbmData : sbmData
-		});
+		}, this.updateStorage);
 	},
 
 	updateStorage: function() {

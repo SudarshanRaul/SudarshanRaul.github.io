@@ -1,0 +1,20 @@
+.input-wrapper {
+	display: table;
+	margin: 0 auto;
+}
+
+.input-wrapper > div {
+	display: table-row;
+}
+
+.input-wrapper > div > div {
+	display: table-cell;
+	padding: 5px 10px;
+}
+
+.sbm-card {
+  display: inline-block;
+  border: 1px solid;
+  margin: 3px;
+  padding: 2px;
+}

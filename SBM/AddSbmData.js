@@ -46,46 +46,45 @@ var AddSbmData = React.createClass({
 
 		return (
 			<div className="sbm-add-container">
-				<div className="input-wrapper" style={style().table}>
-					<div style={style().tableRow}>
-						<div style={style().tableCell}>
+				<div className="input-wrapper">
+					<div>
+						<div>
 							<lable>Date</lable>
 						</div>
-						<div style={style().tableCell}>
+						<div>
 							<input type="date" value={this.state.date} onChange={(event) => this.updateState('date', event.target.value)} />
 						</div>
 					</div>
-					<div style={style().tableRow}>
-						<div style={style().tableCell}>
+					<div>
+						<div>
 							<lable>Description</lable>
 						</div>
-						<div style={style().tableCell}>
+						<div>
 							<input type="text" value={this.state.description} onChange={(event) => this.updateState('description', event.target.value)} />
 						</div>
 					</div>
-					<div style={style().tableRow}>
-						<div style={style().tableCell}>
+					<div>
+						<div>
 							<lable>Value</lable>
 						</div>
-						<div style={style().tableCell}>
+						<div>
 							<input type="number" value={this.state.value} onChange={(event) => this.updateState('value', event.target.value)} />
 						</div>
 					</div>
-					<div style={style().tableRow}>
-						<div style={style().tableCell}>
+					<div>
+						<div>
 							<lable>Out Going</lable>
 						</div>
-						<div style={style().tableCell}>
+						<div>
 							<input type="checkbox" checked={this.state.outgoing} onChange={(event) => this.updateState('outgoing', !this.state.outgoing)} />
 						</div>
 					</div>
-					<div style={style().tableRow}>
-						<div style={style().tableCell}>
+					<div>
+						<div>
 							<lable>Tags</lable>
 						</div>
-<div style={style().tableCell}>
-
-</div>
+						<div>
+						</div>
 					</div>
 					<div>
 						<button onClick={this.addData}>Add</button>

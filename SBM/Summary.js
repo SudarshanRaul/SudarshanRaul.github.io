@@ -1,30 +1,43 @@
 var Summary = React.createClass({
-	
+
 	getInitialState: function() {
 		return {
-			monthlyAverage : 0,
-			currentMonthTotal : this.calCurrentMonthTotal(this.props, 0),
-			currentYearTotal : 0,
-			yearlyAverage : 0
+			monthlyAverage : 0,		//per month starting Jan 2018
+			currentMonthTotal : this.calMonthTotal(this.props, 0, new Date()),
+			currentYearTotal : this.calYearTotal(this.props, 0, new Date()),
+			yearlyAverage : 0		//per year starting Jan 2018
 		}
 	},
 
 	componentWillReceiveProps: function(newProps) {
 		this.setState({
-			currentMonthTotal: this.calCurrentMonthTotal(newProps, 0)
+			currentMonthTotal: this.calMonthTotal(newProps, 0, new Date()),
+			currentYearTotal: this.calYearTotal(newProps, 0, new Date())
 		});
 	},
 
-	calCurrentMonthTotal: function(props, initialValue) {
+	calMonthTotal: function(props, initialValue, date) {
 		if(!props.sbmData) {
 			return initialValue;
 		}
 		return props.sbmData
 			.reduce((finalValue, currentValue) => {
-				if(currentValue.date.split("-")[0] == new Date().getFullYear() && currentValue.date.split("-")[1] == new Date().getMonth() + 1) {
-					return finalValue + parseInt(currentValue.value);	
+				if(currentValue.date.split("-")[0] == date.getFullYear() && currentValue.date.split("-")[1] == date.getMonth() + 1) {
+					return finalValue + parseInt(currentValue.value);
 				}
 				return finalValue;
+			}, initialValue);
+	},
+
+	calYearTotal: function(props, initialValue, date) {
+		if(!props.sbmData) {
+			return initialValue;
+		}
+		return props.sbmData
+			.reduce((finalValue, currentValue) => {
+				if(currentValue.date.split("-")[0] == date.getFullYear()) {
+					return finalValue + parseInt(currentValue.value);
+				}
 			}, initialValue);
 	},
 
@@ -46,5 +59,5 @@ var Summary = React.createClass({
 				</div>
 			</div>
 		);
-	}	
+	}
 });
