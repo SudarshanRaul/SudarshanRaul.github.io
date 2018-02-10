@@ -59,6 +59,7 @@ var App = React.createClass({
 		return (
 			<div className="sbm-container">
 				<AddSbmData sbmPush={this.sbmPush} tags={this.state.sbmCategory} currentData={this.state.currentData}></AddSbmData>
+				<Summary sbmData={this.state.sbmData} />
 				<ListSbmData sbmData={this.state.sbmData} editData={this.editData} deleteData={this.deleteData} />
 			</div>
 		);
