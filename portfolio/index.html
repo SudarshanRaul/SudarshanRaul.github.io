@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sudarshan Raul - Website Engineer</title>
+	<style>
+		nav {
+			position: fixed;
+		}
+		.ico {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+		.hamburger div {
+		    width: 30px;
+		    height: 4px;
+		    margin: 0;
+		    background: #1c1c1c;
+		    border-radius: 4px;
+		    transition: .4s;
+		}
+		.hamburger div:nth-child(3), .hamburger div:nth-child(4) {
+			display: none;
+		}
+		.hamburger div:nth-child(2) {
+			margin: 8px 0;
+		}
+		.close div {
+			width: 42.42px;
+		    height: 4px;
+		    background: #1c1c1c;
+		    border-radius: 4px;
+		    transition: .4s;
+		    display: none;
+		}
+		.close div:nth-child(1) {
+			transform: rotate(45deg) translate(4.5px,13.5px);
+			display: block;
+		}
+		.close div:nth-child(2) {
+			transform: rotate(-45deg) translate(-10.5px,1.5px);
+			display: block;
+		}
+		.home-content{
+		    font-size: 2.000em;
+		    line-height: 1.2;
+		    color: #424242;
+		    font-family: "ff-tundra-web-pro", Georgia, Times, "Times New Roman", serif;
+		}
+		.home-content a {
+		    font-size: 0.4em;
+		    line-height: 0.6;
+		    color: #f31a57;
+		}
+		
+		.parallax {
+		    height: 500px;
+		    height: 100vh;
+		    overflow-x: hidden;
+		    overflow-y: auto;
+		    -webkit-perspective: 300px;
+		    perspective: 300px;
+		}
+		.parallax-group {
+		    position: relative;
+		    height: 500px;
+		    height: 100vh;
+		    -webkit-transform-style: preserve-3d;
+		    transform-style: preserve-3d;
+		}
+		.base-layer {
+		    -webkit-transform: translateZ(0);
+		    transform: translateZ(0);
+		}
+		.back-layer {
+		    -webkit-transform: translateZ(-300px) scale(2);
+		    transform: translateZ(-300px) scale(2);
+		}
+		.deep-layer {
+		    -webkit-transform: translateZ(-600px) scale(3);
+		    transform: translateZ(-600px) scale(3);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<div class="nav-control">
+				<div class="ico close">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</nav>
+
+		<section>
+			<div class="home-content parallax">
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p class="">
+							Hi, my name is Sudarshan Raul and I’m a website engineer.
+						</p>
+						<a>Website engineer? Is it a job?</a>
+					</article>
+				</div>
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p>
+							My primary job is to design and maintain the websites' user interface in a way that feels easy to us humans, so that the website looks good and interaction between us seems easy.
+							<br/>
+							I also work on building, deploying the application to cloud (AWS) and its maintaince.
+						</p>
+						<a>Got it. Are you good at it?</a>
+					</article>
+				</div>
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p>
+							Well, not to toot my own horn, but I’ve had the chance to work with some pretty great websites that have done some pretty amazing things. You would find some more details once we have a discussion.
+						</p>
+						<a>Do you only work? What's there apart from this?</a>
+					</article>
+				</div>
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p>
+							When I’m not working, I play wiht Rubiks' cube. I solve Rubiks' cube in less than two minutes which is making correct one out of 43 quintillion possible combinations. Adding to the list I also do Mirror, Teachers', Professors', Megaminx.
+						</p>
+						<a>Let me digest this. Anything else you would like to say?</a>
+					</article>
+				</div>
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p>
+							Just started with working on my own website. Will be writing things here so keep visiting for more updates.
+						</p>
+						<a>So let me see if I got you right, you are a website and AWS enginner who likes playing rubiks'</a>
+					</article>
+				</div>
+				<div class="parallax-group">
+					<div class="base-layer"></div>
+					<div class="back-layer"></div>
+					<div class="deep-layer"></div>
+					<article>
+						<p>
+							<strong>
+								Well, that conversation went well. Feel free to stick around and read my thoughts, or check out some of the things I’ve worked on as and when I add it here. Oh, and if you need me, I’m always here. Do contact me at sudarshan.raul@icloud.com if you want to get in touch with me or click here to get me profesional portfolio.
+							</strong>
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
