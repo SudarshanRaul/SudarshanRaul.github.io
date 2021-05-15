@@ -104,3 +104,8 @@ p {
   position: absolute;
   right: 10px;
 }
+
+.g-signin > div {
+  background: transparent;
+  color: #f0f0f0;
+}
