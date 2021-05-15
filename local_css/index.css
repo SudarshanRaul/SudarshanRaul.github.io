@@ -100,7 +100,7 @@ p {
   text-align: justify;
 }
 
-.account-sign-in {
+.account-signed-in, .account-sign-in {
   position: absolute;
   right: 10px;
 }
