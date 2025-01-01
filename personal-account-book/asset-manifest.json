@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/personal-account-book/static/css/main.c7cc2f97.css",
-    "main.js": "/personal-account-book/static/js/main.709993de.js",
+    "main.css": "/personal-account-book/static/css/main.2856b769.css",
+    "main.js": "/personal-account-book/static/js/main.883d4baf.js",
     "index.html": "/personal-account-book/index.html",
-    "main.c7cc2f97.css.map": "/personal-account-book/static/css/main.c7cc2f97.css.map",
-    "main.709993de.js.map": "/personal-account-book/static/js/main.709993de.js.map"
+    "main.2856b769.css.map": "/personal-account-book/static/css/main.2856b769.css.map",
+    "main.883d4baf.js.map": "/personal-account-book/static/js/main.883d4baf.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7cc2f97.css",
-    "static/js/main.709993de.js"
+    "static/css/main.2856b769.css",
+    "static/js/main.883d4baf.js"
   ]
 }
